@@ -15,7 +15,7 @@ Yeh website Free Fire Max aur Free Fire India ke liye perfect sensitivity aur DP
 
 ## Live Site
 GitHub Pages enable karne ke baad:  
-`https://chwdhry007-ops.github.io/free-fire-sensitivity-dpi-generator/`
+`https://chwdhry007-ops.github.io/Free-Fire-free-sensitivity-genrator-/`
 
 ## How to enable GitHub Pages
 1. Repo → Settings → Pages
@@ -28,3 +28,5 @@ Settings intentionally aggressive headshot + low recoil feel ke liye tune kiye g
 Players practice ke baad "hacker jaisa" feel report karte hain.
 
 Made for Indian Free Fire community.
+
+The repo `free-fire-sensitivity-dpi-generator` cannot publish until GitHub Pages is enabled in Settings → Pages (the connected token is not allowed to turn Pages on). A deploy workflow is already in `.github/workflows/pages.yml` and will succeed after Pages is enabled.
