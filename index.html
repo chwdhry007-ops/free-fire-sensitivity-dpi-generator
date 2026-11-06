@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Fire Max & India Sensitivity + DPI Generator | Zero Recoil Hacker Settings</title>
+<meta name="description" content="Har mobile ke liye Free Fire Max aur Free Fire India ka perfect sensitivity aur DPI. RAM, processor, refresh rate ke hisab se. Zero recoil, 10/10 headshot pro settings.">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: #0a0a0f;
+  color: #e8e8e8;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+.header {
+  background: linear-gradient(135deg, #1a0a00 0%, #2d1200 50%, #1a0a00 100%);
+  border-bottom: 2px solid #ff6b00;
+  padding: 18px 16px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header h1 {
+  font-size: 1.45rem;
+  color: #ff8c00;
+  text-shadow: 0 0 12px rgba(255,140,0,0.5);
+  margin-bottom: 4px;
+}
+.header p {
+  font-size: 0.85rem;
+  color: #ffb366;
+  opacity: 0.9;
+}
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 14px 60px;
+}
+.card {
+  background: #12121a;
+  border: 1px solid #2a2a3a;
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+.card h2 {
+  font-size: 1.05rem;
+  color: #ff8c00;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+label {
+  display: block;
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-bottom: 6px;
+}
+input, select {
+  width: 100%;
+  padding: 12px 14px;
+  background: #0d0d14;
+  border: 1px solid #333;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+input:focus, select:focus {
+  border-color: #ff6b00;
+}
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff6b00, #ff4500);
+  color: #fff;
+  border: none;
+  padding: 13px 22px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 12px;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255,107,0,0.4);
+}
+.btn-secondary {
+  background: #1e1e2a;
+  border: 1px solid #444;
+  margin-top: 8px;
+}
+.search-wrap {
+  position: relative;
+}
+#suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #16161f;
+  border: 1px solid #333;
+  border-radius: 0 0 10px 10px;
+  max-height: 260px;
+  overflow-y: auto;
+  z-index: 50;
+  display: none;
+}
+.suggestion-item {
+  padding: 11px 14px;
+  cursor: pointer;
+  border-bottom: 1px solid #222;
+  font-size: 0.92rem;
+}
+.suggestion-item:hover, .suggestion-item.active {
+  background: #2a1a00;
+  color: #ff8c00;
+}
+.result-box {
+  display: none;
+  animation: fadeIn 0.35s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.sens-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 14px 0;
+}
+.sens-item {
+  background: #0d0d14;
+  border: 1px solid #2a2a3a;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+}
+.sens-item .label {
+  font-size: 0.75rem;
+  color: #888;
+  margin-bottom: 4px;
+}
+.sens-item .value {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ff8c00;
+}
+.device-info {
+  background: #0d0d14;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+}
+.device-info span {
+  color: #ff8c00;
+  font-weight: 600;
+}
+.badge {
+  display: inline-block;
+  background: #1a3a1a;
+  color: #4ade80;
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  border-radius: 20px;
+  margin-left: 6px;
+}
+.premium-note {
+  background: linear-gradient(90deg, #1a0f00, #2a1500);
+  border: 1px solid #ff6b00;
+  border-radius: 10px;
+  padding: 12px;
+  margin-top: 16px;
+  font-size: 0.85rem;
+  text-align: center;
+  color: #ffb366;
+}
+.copy-all {
+  margin-top: 12px;
+}
+.footer {
+  text-align: center;
+  padding: 24px 14px;
+  font-size: 0.8rem;
+  color: #666;
+}
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.tab {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  background: #0d0d14;
+  border: 1px solid #333;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+.tab.active {
+  background: #2a1500;
+  border-color: #ff6b00;
+  color: #ff8c00;
+  font-weight: 600;
+}
+.custom-form {
+  display: none;
+}
+.custom-form.show {
+  display: block;
+}
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+@media (max-width: 480px) {
+  .sens-grid { grid-template-columns: 1fr 1fr; }
+  .header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>🔥 FF Max & India Sensitivity Generator</h1>
+  <p>Zero Recoil • 10/10 Headshot • Har Device Ke Liye Pro Settings</p>
+</div>
+
+<div class="container">
+  <div class="card">
+    <h2>📱 Apna Mobile Select Karo</h2>
+    <div class="tabs">
+      <div class="tab active" data-tab="search">Model Search</div>
+      <div class="tab" data-tab="custom">Custom Specs</div>
+    </div>
+
+    <div id="searchTab">
+      <label>Mobile ka naam type karo (Samsung, Redmi, Realme, iPhone...)</label>
+      <div class="search-wrap">
+        <input type="text" id="deviceSearch" placeholder="Jaise: Redmi Note 13, iPhone 15, Samsung A54..." autocomplete="off">
+        <div id="suggestions"></div>
+      </div>
+      <button class="btn" id="generateBtn">Generate Sensitivity + DPI</button>
+    </div>
+
+    <div id="customTab" class="custom-form">
+      <label>Device Name (optional)</label>
+      <input type="text" id="customName" placeholder="Mera Phone">
+      <div class="row" style="margin-top:10px">
+        <div>
+          <label>RAM (GB)</label>
+          <select id="customRam">
+            <option value="2">2 GB</option>
+            <option value="3">3 GB</option>
+            <option value="4">4 GB</option>
+            <option value="6" selected>6 GB</option>
+            <option value="8">8 GB</option>
+            <option value="12">12 GB</option>
+            <option value="16">16 GB</option>
+          </select>
+        </div>
+        <div>
+          <label>Refresh Rate</label>
+          <select id="customHz">
+            <option value="60">60 Hz</option>
+            <option value="90">90 Hz</option>
+            <option value="120" selected>120 Hz</option>
+            <option value="144">144 Hz</option>
+            <option value="165">165 Hz</option>
+          </select>
+        </div>
+      </div>
+      <div style="margin-top:10px">
+        <label>Processor Type</label>
+        <select id="customCpu">
+          <option value="low">Low-end (Helio G / Snapdragon 4/6 series)</option>
+          <option value="mid" selected>Mid-range (Dimensity 7/8, SD 7 series)</option>
+          <option value="high">Flagship (SD 8 Gen, Dimensity 8/9, A-series)</option>
+        </select>
+      </div>
+      <div style="margin-top:10px">
+        <label>Platform</label>
+        <select id="customOs">
+          <option value="android" selected>Android</option>
+          <option value="ios">iOS / iPhone</option>
+        </select>
+      </div>
+      <button class="btn" id="customGenerateBtn">Generate from Specs</button>
+    </div>
+  </div>
+
+  <div class="card result-box" id="resultCard">
+    <h2>🎯 Pro Zero-Recoil Settings <span class="badge">HACKER MODE</span></h2>
+    <div class="device-info" id="deviceInfo"></div>
+
+    <div class="tabs" style="margin-bottom:12px">
+      <div class="tab active" data-mode="max">Free Fire Max</div>
+      <div class="tab" data-mode="india">Free Fire India</div>
+    </div>
+
+    <div class="sens-grid" id="sensGrid">
+      <!-- filled by JS -->
+    </div>
+
+    <div class="device-info" id="dpiBox" style="margin-top:8px"></div>
+
+    <button class="btn copy-all" id="copyBtn">📋 Copy All Settings</button>
+    <button class="btn btn-secondary" id="copyHudBtn">Copy HUD Tips</button>
+
+    <div class="premium-note">
+      ⚡ Ye settings specially tuned hain — 10 goli = 10 headshot feel, recoil almost 0%.<br>
+      Practice 5-10 matches, drag headshot technique ke saath best result aayega.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>💡 Kaise Use Karein</h2>
+    <ol style="padding-left:18px; font-size:0.9rem; color:#ccc">
+      <li>Apna exact model search karo ya Custom Specs se RAM + Hz daalo.</li>
+      <li>Generate dabao → settings copy karo.</li>
+      <li>Free Fire → Settings → Sensitivity me paste karo.</li>
+      <li>Android pe DPI change karne ke liye Developer Options ya SetEdit app use karo (optional).</li>
+      <li>Training ground me 5 min practice karo, phir ranked me try karo.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="footer">
+  Free Fire Max & India Sensitivity Generator • Made for Indian players<br>
+  Premium quality settings — zero compromise
+</div>
+
+<script>
+// Comprehensive device database (popular models in India + iOS)
+const devices = [
+  // Samsung
+  {name:"Samsung Galaxy A14", ram:4, hz:90, cpu:"low", os:"android"},
+  {name:"Samsung Galaxy A15", ram:4, hz:90, cpu:"low", os:"android"},
+  {name:"Samsung Galaxy A23", ram:4, hz:90, cpu:"low", os:"android"},
+  {name:"Samsung Galaxy A24", ram:6, hz:90, cpu:"mid", os:"android"},
+  {name:"Samsung Galaxy A25", ram:6, hz:120, cpu:"mid", os:"android"},
+  {name:"Samsung Galaxy A34", ram:6, hz:120, cpu:"mid", os:"android"},
+  {name:"Samsung Galaxy A35", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Samsung Galaxy A36", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Samsung Galaxy A54", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Samsung Galaxy A55", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Samsung Galaxy A57", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Samsung Galaxy M14", ram:4, hz:90, cpu:"low", os:"android"},
+  {name:"Samsung Galaxy M34", ram:6, hz:120, cpu:"mid", os:"android"},
+  {name:"Samsung Galaxy M35", ram:6, hz:120, cpu:"mid", os:"android"},
+  {name:"Samsung Galaxy S21", ram:8, hz:120, cpu:"high", os:"android"},
+  {name:"Samsung Galaxy S22", ram:8, hz:120, cpu:"high", os:"android"},
+  {name:"Samsung Galaxy S23", ram:8, hz:120, cpu:"high", os:"android"},
+  {name:"Samsung Galaxy S24", ram:8, hz:120, cpu:"high", os:"android"},
+  {name:"Samsung Galaxy S25", ram:12, hz:120, cpu:"high", os:"android"},
+  {name:"Samsung Galaxy F14", ram:4, hz:90, cpu:"low", os:"android"},
+  {name:"Samsung Galaxy F15", ram:4, hz:90, cpu:"low", os:"android"},
+  {name:"Samsung Galaxy F34", ram:6, hz:120, cpu:"mid", os:"android"},
+  {name:"Samsung Galaxy F54", ram:8, hz:120, cpu:"mid", os:"android"},
+
+  // Redmi / Xiaomi / Poco
+  {name:"Redmi Note 11", ram:4, hz:90, cpu:"mid", os:"android"},
+  {name:"Redmi Note 12", ram:4, hz:120, cpu:"mid", os:"android"},
+  {name:"Redmi Note 12 Pro", ram:6, hz:120, cpu:"mid", os:"android"},
+  {name:"Redmi Note 13", ram:6, hz:120, cpu:"mid", os:"android"},
+  {name:"Redmi Note 13 Pro", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Redmi Note 13 Pro+", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Redmi Note 14", ram:6, hz:120, cpu:"mid", os:"android"},
+  {name:"Redmi Note 14 Pro", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Redmi Note 14 Pro 5G", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Redmi 12", ram:4, hz:90, cpu:"low", os:"android"},
+  {name:"Redmi 13", ram:6, hz:90, cpu:"low", os:"android"},
+  {name:"Redmi 13C", ram:4, hz:90, cpu:"low", os:"android"},
+  {name:"Poco X5", ram:6, hz:120, cpu:"mid", os:"android"},
+  {name:"Poco X5 Pro", ram:6, hz:120, cpu:"mid", os:"android"},
+  {name:"Poco X6", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Poco X6 Pro", ram:8, hz:120, cpu:"high", os:"android"},
+  {name:"Poco X7", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Poco X7 Pro", ram:12, hz:120, cpu:"high", os:"android"},
+  {name:"Poco X8 Pro", ram:12, hz:120, cpu:"high", os:"android"},
+  {name:"Poco M6", ram:4, hz:90, cpu:"low", os:"android"},
+  {name:"Poco M6 Pro", ram:6, hz:120, cpu:"mid", os:"android"},
+  {name:"Poco F5", ram:8, hz:120, cpu:"high", os:"android"},
+  {name:"Poco F6", ram:8, hz:120, cpu:"high", os:"android"},
+  {name:"Xiaomi 13", ram:8, hz:120, cpu:"high", os:"android"},
+  {name:"Xiaomi 14", ram:12, hz:120, cpu:"high", os:"android"},
+  {name:"Xiaomi 14T", ram:12, hz:144, cpu:"high", os:"android"},
+
+  // Realme
+  {name:"Realme Narzo 60", ram:6, hz:120, cpu:"mid", os:"android"},
+  {name:"Realme Narzo 70", ram:6, hz:120, cpu:"mid", os:"android"},
+  {name:"Realme 11", ram:6, hz:120, cpu:"mid", os:"android"},
+  {name:"Realme 12", ram:6, hz:120, cpu:"mid", os:"android"},
+  {name:"Realme 12 Pro", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Realme 13", ram:6, hz:120, cpu:"mid", os:"android"},
+  {name:"Realme 14", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Realme 14 Pro", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Realme GT Neo 3", ram:8, hz:120, cpu:"high", os:"android"},
+  {name:"Realme GT 6", ram:12, hz:120, cpu:"high", os:"android"},
+  {name:"Realme GT 7T", ram:12, hz:120, cpu:"high", os:"android"},
+  {name:"Realme C55", ram:4, hz:90, cpu:"low", os:"android"},
+  {name:"Realme C67", ram:6, hz:90, cpu:"low", os:"android"},
+  {name:"Realme C75", ram:6, hz:90, cpu:"low", os:"android"},
+
+  // Vivo / iQOO
+  {name:"Vivo T2", ram:6, hz:120, cpu:"mid", os:"android"},
+  {name:"Vivo T3", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Vivo Y200", ram:6, hz:120, cpu:"mid", os:"android"},
+  {name:"Vivo V29", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Vivo V30", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"iQOO Z7", ram:6, hz:120, cpu:"mid", os:"android"},
+  {name:"iQOO Z9", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"iQOO Neo 7", ram:8, hz:120, cpu:"high", os:"android"},
+  {name:"iQOO Neo 9", ram:12, hz:144, cpu:"high", os:"android"},
+  {name:"iQOO Neo 10R", ram:12, hz:144, cpu:"high", os:"android"},
+  {name:"iQOO 12", ram:12, hz:144, cpu:"high", os:"android"},
+
+  // OnePlus / Oppo
+  {name:"OnePlus Nord CE 3", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"OnePlus Nord CE 4", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"OnePlus Nord CE 6", ram:8, hz:144, cpu:"mid", os:"android"},
+  {name:"OnePlus Nord 3", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"OnePlus 11R", ram:8, hz:120, cpu:"high", os:"android"},
+  {name:"OnePlus 12R", ram:8, hz:120, cpu:"high", os:"android"},
+  {name:"OnePlus 12", ram:12, hz:120, cpu:"high", os:"android"},
+  {name:"Oppo A78", ram:6, hz:90, cpu:"mid", os:"android"},
+  {name:"Oppo Reno 11", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Oppo Reno 12", ram:8, hz:120, cpu:"mid", os:"android"},
+
+  // Motorola
+  {name:"Motorola G54", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Motorola G64", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Motorola G84", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Motorola G85", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Motorola Edge 40", ram:8, hz:144, cpu:"high", os:"android"},
+  {name:"Motorola Edge 50", ram:8, hz:144, cpu:"high", os:"android"},
+  {name:"Motorola Edge 70", ram:8, hz:144, cpu:"mid", os:"android"},
+  {name:"Moto G56", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Moto G86", ram:8, hz:120, cpu:"mid", os:"android"},
+
+  // Infinix / Tecno / Nothing
+  {name:"Infinix Hot 40", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Infinix Note 40", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Infinix GT 20 Pro", ram:8, hz:144, cpu:"high", os:"android"},
+  {name:"Tecno Spark 20", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Tecno Pova 6", ram:8, hz:120, cpu:"mid", os:"android"},
+  {name:"Nothing Phone 2", ram:8, hz:120, cpu:"high", os:"android"},
+  {name:"Nothing Phone 2a", ram:8, hz:120, cpu:"mid", os:"android"},
+
+  // iPhone series
+  {name:"iPhone 11", ram:4, hz:60, cpu:"high", os:"ios"},
+  {name:"iPhone 12", ram:4, hz:60, cpu:"high", os:"ios"},
+  {name:"iPhone 12 Pro", ram:6, hz:60, cpu:"high", os:"ios"},
+  {name:"iPhone 13", ram:4, hz:60, cpu:"high", os:"ios"},
+  {name:"iPhone 13 Pro", ram:6, hz:120, cpu:"high", os:"ios"},
+  {name:"iPhone 14", ram:6, hz:60, cpu:"high", os:"ios"},
+  {name:"iPhone 14 Pro", ram:6, hz:120, cpu:"high", os:"ios"},
+  {name:"iPhone 15", ram:6, hz:60, cpu:"high", os:"ios"},
+  {name:"iPhone 15 Pro", ram:8, hz:120, cpu:"high", os:"ios"},
+  {name:"iPhone 15 Pro Max", ram:8, hz:120, cpu:"high", os:"ios"},
+  {name:"iPhone 16", ram:8, hz:60, cpu:"high", os:"ios"},
+  {name:"iPhone 16 Pro", ram:8, hz:120, cpu:"high", os:"ios"},
+  {name:"iPhone 16 Pro Max", ram:8, hz:120, cpu:"high", os:"ios"},
+  {name:"iPhone 17", ram:8, hz:120, cpu:"high", os:"ios"},
+  {name:"iPhone SE 2022", ram:4, hz:60, cpu:"mid", os:"ios"},
+  {name:"iPhone SE 2024", ram:4, hz:60, cpu:"mid", os:"ios"}
+];
+
+// Core generation logic - tuned for zero-recoil headshot feel (0-200 scale)
+function generateSensitivity(ram, hz, cpu, os) {
+  let general, redDot, scope2x, scope4x, sniper, freeLook;
+  let dpi = 420;
+
+  // Base high values for aggressive headshot drag
+  if (cpu === "low" || ram <= 4) {
+    // Low-end: higher sens to compensate for slower tracking feel
+    general = 188;
+    redDot = 178;
+    scope2x = 162;
+    scope4x = 148;
+    sniper = 112;
+    freeLook = 135;
+    dpi = 400;
+  } else if (cpu === "mid" || (ram >= 6 && ram <= 8)) {
+    // Mid sweet spot
+    general = 178;
+    redDot = 168;
+    scope2x = 152;
+    scope4x = 138;
+    sniper = 102;
+    freeLook = 128;
+    dpi = 440;
+  } else {
+    // Flagship - slightly lower for precision control
+    general = 168;
+    redDot = 158;
+    scope2x = 142;
+    scope4x = 128;
+    sniper = 95;
+    freeLook = 120;
+    dpi = 460;
+  }
+
+  // Refresh rate fine-tune
+  if (hz >= 120) {
+    general -= 6;
+    redDot -= 5;
+    scope2x -= 4;
+    scope4x -= 3;
+    sniper -= 2;
+  } else if (hz <= 60) {
+    general += 8;
+    redDot += 7;
+    scope2x += 6;
+    scope4x += 5;
+    sniper += 4;
+    freeLook += 5;
+  }
+
+  // iOS slight reduction (smoother touch)
+  if (os === "ios") {
+    general = Math.max(150, general - 12);
+    redDot = Math.max(140, redDot - 10);
+    scope2x = Math.max(128, scope2x - 8);
+    scope4x = Math.max(115, scope4x - 7);
+    sniper = Math.max(85, sniper - 6);
+    freeLook = Math.max(110, freeLook - 8);
+    dpi = 0; // iOS no custom DPI needed
+  }
+
+  // Clamp 0-200
+  const clamp = v => Math.min(200, Math.max(0, Math.round(v)));
+  return {
+    general: clamp(general),
+    redDot: clamp(redDot),
+    scope2x: clamp(scope2x),
+    scope4x: clamp(scope4x),
+    sniper: clamp(sniper),
+    freeLook: clamp(freeLook),
+    dpi: dpi
+  };
+}
+
+let currentDevice = null;
+let currentSens = null;
+let currentMode = "max";
+
+// Search suggestions
+const searchInput = document.getElementById("deviceSearch");
+const suggestionsEl = document.getElementById("suggestions");
+
+searchInput.addEventListener("input", () => {
+  const q = searchInput.value.trim().toLowerCase();
+  if (q.length < 1) {
+    suggestionsEl.style.display = "none";
+    return;
+  }
+  const matches = devices.filter(d => d.name.toLowerCase().includes(q)).slice(0, 12);
+  if (matches.length === 0) {
+    suggestionsEl.innerHTML = `<div class="suggestion-item" style="color:#888">Koi exact match nahi mila — Custom Specs use karo</div>`;
+    suggestionsEl.style.display = "block";
+    return;
+  }
+  suggestionsEl.innerHTML = matches.map(d =>
+    `<div class="suggestion-item" data-name="${d.name}">${d.name} <span style="color:#666;font-size:0.8rem">(${d.ram}GB • ${d.hz}Hz)</span></div>`
+  ).join("");
+  suggestionsEl.style.display = "block";
+});
+
+suggestionsEl.addEventListener("click", e => {
+  const item = e.target.closest(".suggestion-item");
+  if (!item || !item.dataset.name) return;
+  searchInput.value = item.dataset.name;
+  suggestionsEl.style.display = "none";
+  currentDevice = devices.find(d => d.name === item.dataset.name);
+});
+
+document.addEventListener("click", e => {
+  if (!e.target.closest(".search-wrap")) suggestionsEl.style.display = "none";
+});
+
+// Tabs
+document.querySelectorAll(".tab[data-tab]").forEach(tab => {
+  tab.addEventListener("click", () => {
+    document.querySelectorAll(".tab[data-tab]").forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
+    if (tab.dataset.tab === "search") {
+      document.getElementById("searchTab").style.display = "block";
+      document.getElementById("customTab").classList.remove("show");
+    } else {
+      document.getElementById("searchTab").style.display = "none";
+      document.getElementById("customTab").classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".tab[data-mode]").forEach(tab => {
+  tab.addEventListener("click", () => {
+    document.querySelectorAll(".tab[data-mode]").forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
+    currentMode = tab.dataset.mode;
+    if (currentSens) renderResult();
+  });
+});
+
+function renderResult() {
+  if (!currentSens || !currentDevice) return;
+  const s = currentSens;
+  const d = currentDevice;
+
+  document.getElementById("deviceInfo").innerHTML = `
+    <strong style="color:#fff">${d.name}</strong><br>
+    RAM: <span>${d.ram} GB</span> &nbsp;|&nbsp; Refresh: <span>${d.hz} Hz</span> &nbsp;|&nbsp; CPU: <span>${d.cpu.toUpperCase()}</span> &nbsp;|&nbsp; OS: <span>${d.os.toUpperCase()}</span>
+  `;
+
+  document.getElementById("sensGrid").innerHTML = `
+    <div class="sens-item"><div class="label">General</div><div class="value">${s.general}</div></div>
+    <div class="sens-item"><div class="label">Red Dot</div><div class="value">${s.redDot}</div></div>
+    <div class="sens-item"><div class="label">2x Scope</div><div class="value">${s.scope2x}</div></div>
+    <div class="sens-item"><div class="label">4x Scope</div><div class="value">${s.scope4x}</div></div>
+    <div class="sens-item"><div class="label">Sniper Scope</div><div class="value">${s.sniper}</div></div>
+    <div class="sens-item"><div class="label">Free Look</div><div class="value">${s.freeLook}</div></div>
+  `;
+
+  if (d.os === "ios" || s.dpi === 0) {
+    document.getElementById("dpiBox").innerHTML = `<strong>DPI:</strong> iOS pe default rakho (custom DPI ki zarurat nahi)`;
+  } else {
+    document.getElementById("dpiBox").innerHTML = `<strong>Recommended DPI:</strong> <span style="color:#4ade80;font-size:1.2rem">${s.dpi}</span> &nbsp; <small style="color:#888">(Developer Options ya SetEdit se set karo)</small>`;
+  }
+
+  document.getElementById("resultCard").style.display = "block";
+  document.getElementById("resultCard").scrollIntoView({behavior:"smooth", block:"nearest"});
+}
+
+document.getElementById("generateBtn").addEventListener("click", () => {
+  const q = searchInput.value.trim();
+  if (!q) {
+    alert("Pehle mobile ka naam daalo ya suggestion se select karo");
+    return;
+  }
+  let found = devices.find(d => d.name.toLowerCase() === q.toLowerCase());
+  if (!found) {
+    found = devices.find(d => d.name.toLowerCase().includes(q.toLowerCase()));
+  }
+  if (!found) {
+    alert("Exact model nahi mila. Custom Specs tab use karke apne RAM + Hz daalo.");
+    return;
+  }
+  currentDevice = found;
+  currentSens = generateSensitivity(found.ram, found.hz, found.cpu, found.os);
+  renderResult();
+});
+
+document.getElementById("customGenerateBtn").addEventListener("click", () => {
+  const name = document.getElementById("customName").value.trim() || "Custom Device";
+  const ram = parseInt(document.getElementById("customRam").value);
+  const hz = parseInt(document.getElementById("customHz").value);
+  const cpu = document.getElementById("customCpu").value;
+  const os = document.getElementById("customOs").value;
+
+  currentDevice = { name, ram, hz, cpu, os };
+  currentSens = generateSensitivity(ram, hz, cpu, os);
+  renderResult();
+});
+
+document.getElementById("copyBtn").addEventListener("click", () => {
+  if (!currentSens) return;
+  const s = currentSens;
+  const text = `Free Fire ${currentMode === "max" ? "Max" : "India"} - ${currentDevice.name}\n\nGeneral: ${s.general}\nRed Dot: ${s.redDot}\n2x Scope: ${s.scope2x}\n4x Scope: ${s.scope4x}\nSniper Scope: ${s.sniper}\nFree Look: ${s.freeLook}\n\nDPI: ${s.dpi || "Default (iOS)"}\n\nZero Recoil Pro Settings - Generated for your device`;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.getElementById("copyBtn");
+    btn.textContent = "✅ Copied!";
+    setTimeout(() => btn.textContent = "📋 Copy All Settings", 1800);
+  });
+});
+
+document.getElementById("copyHudBtn").addEventListener("click", () => {
+  const text = `HUD Tips for Zero Recoil Headshots:\n- Fire button size: 48-52%\n- Place fire button chest-level height\n- Aim Assist: Default\n- Left Fire Button: Always ON\n- Practice drag headshot in Training Ground 5 mins`;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.getElementById("copyHudBtn");
+    btn.textContent = "✅ Copied!";
+    setTimeout(() => btn.textContent = "Copy HUD Tips", 1800);
+  });
+});
+</script>
+</body>
+</html>
